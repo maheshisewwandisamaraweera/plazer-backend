@@ -1,16 +1,4 @@
-// //import { Module } from '@nestjs/common';
-// //import { AppController } from './app.controller';
-// //import { AppService } from './app.service';
 
-// @Module({
-//   imports: [],
-//   controllers: [AppController],
-//   providers: [AppService],
-// })
-// export class AppModule {}
-
-// src/app.module.ts
-// app.module.ts
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './user/user.module';
@@ -28,6 +16,7 @@ import { AuthModule } from './auth/auth.module';
       synchronize: true, 
       logging: true, 
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      //entities: [User],
     }),
     UsersModule,
     AuthModule,
